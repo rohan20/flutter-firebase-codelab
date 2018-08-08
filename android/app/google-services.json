@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "444527616116",
+    "firebase_url": "https://footballers-app-db.firebaseio.com",
+    "project_id": "footballers-app-db",
+    "storage_bucket": "footballers-app-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444527616116:android:e6faacf2c1f99f09",
+        "android_client_info": {
+          "package_name": "com.example.firebasecodelab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444527616116-n8vfmbefregcniv4md7049u0a6ugl6e9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfRH7jbp2GoLXgjd0VbEWhnOAyQB3V0cc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
