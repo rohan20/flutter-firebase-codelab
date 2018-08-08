@@ -29,15 +29,39 @@ class MyHomePage extends StatelessWidget {
           builder: (context, snapshot) {
             if (!snapshot.hasData) return const Text('Loading...');
             return new ListView.builder(
-                itemCount: snapshot.data.documents.length,
-                padding: const EdgeInsets.only(top: 10.0),
-                itemExtent: 25.0,
-                itemBuilder: (context, index) {
-                  DocumentSnapshot ds = snapshot.data.documents[index];
-                  return new Text(" ${ds['name']} ${ds['votes']}");
-                }
+              itemCount: snapshot.data.documents.length,
+              padding: const EdgeInsets.only(top: 10.0),
+              itemExtent: 55.0,
+              itemBuilder: (context, index) =>
+                  _buildListItem(context, snapshot.data.documents[index]),
             );
           }),
+    );
+  }
+
+  _buildListItem(context, document) {
+    return ListTile(
+      title: Container(
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: Colors.black,
+          ),
+          borderRadius: BorderRadius.circular(5.0),
+        ),
+        padding: const EdgeInsets.all(10.0),
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: Text(
+                document['name'],
+              ),
+            ),
+            Text(
+              document['votes'].toString(),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
