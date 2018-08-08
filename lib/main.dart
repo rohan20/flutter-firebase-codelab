@@ -41,6 +41,7 @@ class MyHomePage extends StatelessWidget {
 
   _buildListItem(context, document) {
     return ListTile(
+      key: ValueKey(document.documentID),
       title: Container(
         decoration: BoxDecoration(
           border: Border.all(
