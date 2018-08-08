@@ -62,6 +62,14 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
+      onTap: () {
+        return Firestore.instance.runTransaction((transaction) async {
+          DocumentSnapshot newSnapshot =
+              await transaction.get(document.reference);
+          await transaction.update(
+              newSnapshot.reference, {'votes': newSnapshot['votes'] + 1});
+        });
+      },
     );
   }
 }
