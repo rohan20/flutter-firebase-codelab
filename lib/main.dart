@@ -9,8 +9,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Baby Names',
-      home: const MyHomePage(title: 'Baby Name Votes'),
+      title: 'Footballer Names',
+      home: const MyHomePage(title: 'Footballer Name Votes'),
     );
   }
 }
